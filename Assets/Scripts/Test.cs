@@ -56,7 +56,125 @@ public class Test : MonoBehaviour
         }
     }
 
-  /*  void Test$$MangList(void)
+    /*  void Test$$MangList(void)
+
+      {
+          uint uVar1;
+          long lVar2;
+          undefined8 uVar3;
+          long lVar4;
+          long lVar5;
+          int iVar6;
+          undefined4 uStack_34;
+
+          if ((DAT_00fc4cf1 & 1) == 0)
+          {
+              thunk_FUN_00857a14(&UnityEngine.Debug_TypeInfo);
+              thunk_FUN_00857a14(&int_TypeInfo);
+              thunk_FUN_00857a14(&Method$System.Collections.Generic.List<int>.Add());
+              thunk_FUN_00857a14(&Method$System.Collections.Generic.List<int>..ctor());
+              thunk_FUN_00857a14(&Method$System.Collections.Generic.List<int>.get_Count());
+              thunk_FUN_00857a14(&Method$System.Collections.Generic.List<int>.get_Item());
+              thunk_FUN_00857a14(&System.Collections.Generic.List<int>_TypeInfo);
+              DAT_00fc4cf1 = 1;
+          }
+          lVar2 = thunk_FUN_0086e018(System.Collections.Generic.List<int>_TypeInfo);
+          System.Collections.Generic.List<int>$$.ctor
+                    (lVar2, Method$System.Collections.Generic.List<int>..ctor());
+          lVar5 = Method$System.Collections.Generic.List<int>.Add();
+          if (lVar2 != 0)
+          {
+              lVar4 = *(long*)(lVar2 + 0x10);
+              *(int*)(lVar2 + 0x1c) = *(int*)(lVar2 + 0x1c) + 1;
+              if (lVar4 != 0)
+              {
+                  uVar1 = *(uint*)(lVar2 + 0x18);
+                  if (uVar1 < *(uint*)(lVar4 + 0x18))
+                  {
+                      *(uint*)(lVar2 + 0x18) = uVar1 + 1;
+                      *(undefined4*)(lVar4 + (long)(int)uVar1 * 4 + 0x20) = 0;
+                      *(int*)(lVar2 + 0x1c) = *(int*)(lVar2 + 0x1c) + 1;
+                  }
+                  else
+                  {
+                      System.Collections.Generic.List<int>$$AddWithResize
+                                (lVar2, 0, *(undefined8*)(*(long*)(*(long*)(lVar5 + 0x20) + 0xc0) + 0x70));
+                      lVar5 = Method$System.Collections.Generic.List<int>.Add();
+                      lVar4 = *(long*)(lVar2 + 0x10);
+                      *(int*)(lVar2 + 0x1c) = *(int*)(lVar2 + 0x1c) + 1;
+                      if (lVar4 == 0) goto LAB_0091fd5c;
+                  }
+                  uVar1 = *(uint*)(lVar2 + 0x18);
+                  if (uVar1 < *(uint*)(lVar4 + 0x18))
+                  {
+                      *(uint*)(lVar2 + 0x18) = uVar1 + 1;
+                      *(undefined4*)(lVar4 + (long)(int)uVar1 * 4 + 0x20) = 1;
+                  }
+                  else
+                  {
+                      System.Collections.Generic.List<int>$$AddWithResize
+                                (lVar2, 1, *(undefined8*)(*(long*)(*(long*)(lVar5 + 0x20) + 0xc0) + 0x70));
+                  }
+                  iVar6 = 2;
+                  while (true)
+                  {
+                      lVar5 = Method$System.Collections.Generic.List<int>.Add();
+                      lVar4 = *(long*)(lVar2 + 0x10);
+                      *(int*)(lVar2 + 0x1c) = *(int*)(lVar2 + 0x1c) + 1;
+                      if (lVar4 == 0) break;
+                      uVar1 = *(uint*)(lVar2 + 0x18);
+                      if (uVar1 < *(uint*)(lVar4 + 0x18))
+                      {
+                          *(uint*)(lVar2 + 0x18) = uVar1 + 1;
+                          *(int*)(lVar4 + (long)(int)uVar1 * 4 + 0x20) = iVar6;
+                      }
+                      else
+                      {
+                          System.Collections.Generic.List<int>$$AddWithResize
+                                    (lVar2, iVar6, *(undefined8*)(*(long*)(*(long*)(lVar5 + 0x20) + 0xc0) + 0x70));
+                      }
+                      iVar6 = iVar6 + 1;
+                      if (iVar6 == 6)
+                      {
+                          if (0 < *(int*)(lVar2 + 0x18))
+                          {
+                              iVar6 = 0;
+                              do
+                              {
+                                  uStack_34 = System.Collections.Generic.List<int>$$get_Item
+                                  (lVar2, iVar6,
+                                                         Method$System.Collections.Generic.List<int>.get_Item());
+                                  uVar3 = thunk_FUN_0086dc48(int_TypeInfo, &uStack_34);
+                                  if (*(int*)(UnityEngine.Debug_TypeInfo + 0xe0) == 0)
+                                  {
+                                      thunk_FUN_0084c4c0(UnityEngine.Debug_TypeInfo);
+                                  }
+                                  UnityEngine.Debug$$Log(uVar3, 0);
+                                  iVar6 = iVar6 + 1;
+                              } while (iVar6 < *(int*)(lVar2 + 0x18));
+                          }
+                          return;
+                      }
+                  }
+              }
+          }
+          LAB_0091fd5c:
+          *//* WARNING: Subroutine does not return *//*
+          FUN_0081afec();
+      }*/
+
+    private void MangList2()
+    {
+        List<int> test = new List<int>();
+        test.Add(0);
+        test.Add(1);
+        for (int i = 0; i < test.Count; i++)
+        {
+            Debug.Log(test[i]);
+        }
+    }
+
+/*    void Test$$MangList2(void)
 
     {
         uint uVar1;
@@ -67,21 +185,21 @@ public class Test : MonoBehaviour
         int iVar6;
         undefined4 uStack_34;
 
-        if ((DAT_00fc4cf1 & 1) == 0)
+        if ((bRam0000000000fc5612 & 1) == 0)
         {
-            thunk_FUN_00857a14(&UnityEngine.Debug_TypeInfo);
-            thunk_FUN_00857a14(&int_TypeInfo);
-            thunk_FUN_00857a14(&Method$System.Collections.Generic.List<int>.Add());
-            thunk_FUN_00857a14(&Method$System.Collections.Generic.List<int>..ctor());
-            thunk_FUN_00857a14(&Method$System.Collections.Generic.List<int>.get_Count());
-            thunk_FUN_00857a14(&Method$System.Collections.Generic.List<int>.get_Item());
-            thunk_FUN_00857a14(&System.Collections.Generic.List<int>_TypeInfo);
-            DAT_00fc4cf1 = 1;
+            thunk_FUN_00857c24(&UnityEngine.Debug_TypeInfo);
+            thunk_FUN_00857c24(&int_TypeInfo);
+            thunk_FUN_00857c24(&Method$System.Collections.Generic.List<int>.Add());
+            thunk_FUN_00857c24(&Method$System.Collections.Generic.List<int>..ctor());
+            thunk_FUN_00857c24(&Method$System.Collections.Generic.List<int>.get_Count());
+            thunk_FUN_00857c24(&Method$System.Collections.Generic.List<int>.get_Item());
+            thunk_FUN_00857c24(&System.Collections.Generic.List<int>_TypeInfo);
+            bRam0000000000fc5612 = 1;
         }
-        lVar2 = thunk_FUN_0086e018(System.Collections.Generic.List<int>_TypeInfo);
+        lVar2 = thunk_FUN_0086e228(_System.Collections.Generic.List<int>_TypeInfo);
         System.Collections.Generic.List<int>$$.ctor
-                  (lVar2, Method$System.Collections.Generic.List<int>..ctor());
-        lVar5 = Method$System.Collections.Generic.List<int>.Add();
+                  (lVar2, _Method$System.Collections.Generic.List<int>..ctor());
+        lVar5 = _Method$System.Collections.Generic.List<int>.Add();
         if (lVar2 != 0)
         {
             lVar4 = *(long*)(lVar2 + 0x10);
@@ -99,10 +217,10 @@ public class Test : MonoBehaviour
                 {
                     System.Collections.Generic.List<int>$$AddWithResize
                               (lVar2, 0, *(undefined8*)(*(long*)(*(long*)(lVar5 + 0x20) + 0xc0) + 0x70));
-                    lVar5 = Method$System.Collections.Generic.List<int>.Add();
+                    lVar5 = _Method$System.Collections.Generic.List<int>.Add();
                     lVar4 = *(long*)(lVar2 + 0x10);
                     *(int*)(lVar2 + 0x1c) = *(int*)(lVar2 + 0x1c) + 1;
-                    if (lVar4 == 0) goto LAB_0091fd5c;
+                    if (lVar4 == 0) goto LAB_00920164;
                 }
                 uVar1 = *(uint*)(lVar2 + 0x18);
                 if (uVar1 < *(uint*)(lVar4 + 0x18))
@@ -115,52 +233,29 @@ public class Test : MonoBehaviour
                     System.Collections.Generic.List<int>$$AddWithResize
                               (lVar2, 1, *(undefined8*)(*(long*)(*(long*)(lVar5 + 0x20) + 0xc0) + 0x70));
                 }
-                iVar6 = 2;
-                while (true)
+                if (0 < *(int*)(lVar2 + 0x18))
                 {
-                    lVar5 = Method$System.Collections.Generic.List<int>.Add();
-                    lVar4 = *(long*)(lVar2 + 0x10);
-                    *(int*)(lVar2 + 0x1c) = *(int*)(lVar2 + 0x1c) + 1;
-                    if (lVar4 == 0) break;
-                    uVar1 = *(uint*)(lVar2 + 0x18);
-                    if (uVar1 < *(uint*)(lVar4 + 0x18))
+                    iVar6 = 0;
+                    do
                     {
-                        *(uint*)(lVar2 + 0x18) = uVar1 + 1;
-                        *(int*)(lVar4 + (long)(int)uVar1 * 4 + 0x20) = iVar6;
-                    }
-                    else
-                    {
-                        System.Collections.Generic.List<int>$$AddWithResize
-                                  (lVar2, iVar6, *(undefined8*)(*(long*)(*(long*)(lVar5 + 0x20) + 0xc0) + 0x70));
-                    }
-                    iVar6 = iVar6 + 1;
-                    if (iVar6 == 6)
-                    {
-                        if (0 < *(int*)(lVar2 + 0x18))
+                        uStack_34 = System.Collections.Generic.List<int>$$get_Item
+                                              (lVar2, iVar6, _Method$System.Collections.Generic.List<int>.get_Item()
+                                              );
+                        uVar3 = thunk_FUN_0086de58(_int_TypeInfo, &uStack_34);
+                        if (*(int*)(_UnityEngine.Debug_TypeInfo + 0xe0) == 0)
                         {
-                            iVar6 = 0;
-                            do
-                            {
-                                uStack_34 = System.Collections.Generic.List<int>$$get_Item
-                                (lVar2, iVar6,
-                                                       Method$System.Collections.Generic.List<int>.get_Item());
-                                uVar3 = thunk_FUN_0086dc48(int_TypeInfo, &uStack_34);
-                                if (*(int*)(UnityEngine.Debug_TypeInfo + 0xe0) == 0)
-                                {
-                                    thunk_FUN_0084c4c0(UnityEngine.Debug_TypeInfo);
-                                }
-                                UnityEngine.Debug$$Log(uVar3, 0);
-                                iVar6 = iVar6 + 1;
-                            } while (iVar6 < *(int*)(lVar2 + 0x18));
+                            thunk_FUN_0084c6d0(_UnityEngine.Debug_TypeInfo);
                         }
-                        return;
-                    }
+                        UnityEngine.Debug$$Log(uVar3, 0);
+                        iVar6 = iVar6 + 1;
+                    } while (iVar6 < *(int*)(lVar2 + 0x18));
                 }
+                return;
             }
         }
-        LAB_0091fd5c:
+        LAB_00920164:
         *//* WARNING: Subroutine does not return *//*
-        FUN_0081afec();
+        FUN_0081b1fc();
     }*/
 
     private void MangChar()
