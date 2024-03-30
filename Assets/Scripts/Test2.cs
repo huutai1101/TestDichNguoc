@@ -222,4 +222,75 @@ public class Test2 : MonoBehaviour
         *//* WARNING: Subroutine does not return *//*
         FUN_0081b1fc();
     }*/
+
+    private void CongCharArray()
+    {
+        char[] a = new char[3] { 's', '7','D'};
+        int kq1 = (int)(a[0] + a[1]);
+        int kq2 = (int)(a[0]) + (int)(a[1]) + (int)(a[2]) + 7;
+        Debug.Log(kq1);
+        Debug.Log(kq2);
+    }
+
+    /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+/*    undefined8 Test2$$CongCharArray(void)
+
+    {
+        int iVar1;
+        uint uVar2;
+        ushort uVar3;
+        long lVar4;
+        undefined8 uVar5;
+        int iStack_28;
+        int iStack_24;
+
+        if ((bRam0000000000fc4b99 & 1) == 0)
+        {
+            FUN_0081ac94(&char[]_TypeInfo);
+            FUN_0081ac94(&UnityEngine.Debug_TypeInfo);
+            FUN_0081ac94(&int_TypeInfo);
+            FUN_0081ac94(&
+                         Field$< PrivateImplementationDetails > .614B285A8CE7F035B6B3764855262635C5ED525E77F13B F0B0C06A05E65C1F26
+                        );
+            bRam0000000000fc4b99 = 1;
+        }
+        lVar4 = FUN_0081ad24(_char[]_TypeInfo, 3);
+        System.Runtime.CompilerServices.RuntimeHelpers$$InitializeArray
+                  (lVar4,
+                   _Field$< PrivateImplementationDetails > .614B285A8CE7F035B6B3764855262635C5ED525E77F13BF0B 0C06A05E65C1F26
+                   , 0);
+        if (lVar4 != 0)
+        {
+            uVar2 = *(uint*)(lVar4 + 0x18);
+            if (((uVar2 != 1) && (uVar2 != 0)) && (2 < uVar2))
+            {
+                uVar3 = *(ushort*)(lVar4 + 0x24);
+                iVar1 = (uint)*(ushort*)(lVar4 + 0x22) + (uint)*(ushort*)(lVar4 + 0x20);
+                iStack_24 = iVar1;
+                uVar5 = FUN_0081adb4(_int_TypeInfo, &iStack_24);
+                if (*(int*)(_UnityEngine.Debug_TypeInfo + 0xe0) == 0)
+                {
+                    FUN_0081adac(_UnityEngine.Debug_TypeInfo);
+                }
+                UnityEngine.Debug$$Log(uVar5, 0);
+                iStack_28 = iVar1 + (uint)uVar3 + 7;
+                uVar5 = FUN_0081adb4(_int_TypeInfo, &iStack_28);
+                uVar5 = UnityEngine.Debug$$Log(uVar5, 0);
+                return uVar5;
+            }
+            FUN_0081aed8();
+        }
+        uVar5 = FUN_0081aed0();
+        if ((bRam0000000000fc6ed8 & 1) == 0)
+        {
+            FUN_0081ac94(&UnityEngine.Object_TypeInfo, 0);
+            bRam0000000000fc6ed8 = 1;
+        }
+        if (*(int*)(_UnityEngine.Object_TypeInfo + 0xe0) == 0)
+        {
+            FUN_0081adac();
+        }
+        return uVar5;
+    }*/
 }
