@@ -290,20 +290,97 @@ public class Test : MonoBehaviour
         char[] test2 = test.ToCharArray(4,5);
     }
 
-   /* void Test$$ChuoiString(void)
+    /* void Test$$ChuoiString(void)
+
+     {
+         if ((DAT_00fc4cf3 & 1) == 0)
+         {
+             thunk_FUN_00857a14(&StringLiteral_337);
+             DAT_00fc4cf3 = 1;
+         }
+         if (StringLiteral_337 != 0)
+         {
+             System.String$$ToCharArray(StringLiteral_337, 4, 5, 0);
+             return;
+         }
+         *//* WARNING: Subroutine does not return *//*
+         FUN_0081afec();
+     }*/
+
+    private int TimMin()
+    {
+        int[] list = new int[6] { 8, 4, 11, 0, 9, -1 };
+        int min = list[0];
+        for (int i = 1; i < list.Length; i++)
+        {
+            if(min > list[i])
+            {
+                min = list[i];
+            }
+        }
+        return min;
+    }
+
+/*    ulong Test$$TimMin(void)
 
     {
-        if ((DAT_00fc4cf3 & 1) == 0)
+        long lVar1;
+        uint uVar2;
+        long lVar3;
+        ulong uVar4;
+        int iVar5;
+        long lVar6;
+
+        if ((bRam0000000000fc5be5 & 1) == 0)
         {
-            thunk_FUN_00857a14(&StringLiteral_337);
-            DAT_00fc4cf3 = 1;
+            thunk_FUN_00857fc0(&int[]_TypeInfo);
+            thunk_FUN_00857fc0(&
+                               Field$< PrivateImplementationDetails > .89A2EDB5C4B00165B39E524AF59EE0978C3FDD45 29E5CF404CE295529A31E4F7
+                              );
+            bRam0000000000fc5be5 = 1;
         }
-        if (StringLiteral_337 != 0)
+        lVar3 = FUN_0081b3ec(_int[]_TypeInfo, 6);
+        System.Runtime.CompilerServices.RuntimeHelpers$$InitializeArray
+                  (lVar3,
+                   _Field$< PrivateImplementationDetails > .89A2EDB5C4B00165B39E524AF59EE0978C3FDD4529E5CF404 CE295529A31E4F7
+                   , 0);
+        if (lVar3 != 0)
         {
-            System.String$$ToCharArray(StringLiteral_337, 4, 5, 0);
-            return;
+            iVar5 = (int)*(ulong*)(lVar3 + 0x18);
+            if (iVar5 != 0)
+            {
+                uVar4 = (ulong)*(uint*)(lVar3 + 0x20);
+                if (1 < iVar5)
+                {
+                    lVar6 = 0;
+                    do
+                    {
+                        if ((*(ulong*)(lVar3 + 0x18) & 0xffffffff) - 1 == lVar6) goto LAB_00920668;
+                        uVar2 = *(uint*)(lVar3 + 0x24 + lVar6 * 4);
+                        lVar1 = lVar6 + 2;
+                        lVar6 = lVar6 + 1;
+                        if ((int)(uint)uVar4 <= (int)uVar2)
+                        {
+                            uVar2 = (uint)uVar4;
+                        }
+                        uVar4 = (ulong)uVar2;
+                    } while (lVar1 < iVar5);
+                }
+                return uVar4;
+            }
+            LAB_00920668:
+            FUN_0081b5a0();
         }
-        *//* WARNING: Subroutine does not return *//*
-        FUN_0081afec();
+        uVar4 = FUN_0081b598();
+        if ((bRam0000000000fc7f38 & 1) == 0)
+        {
+            thunk_FUN_00857fc0(&UnityEngine.Object_TypeInfo, 0);
+            bRam0000000000fc7f38 = 1;
+        }
+        if (*(int*)(_UnityEngine.Object_TypeInfo + 0xe0) == 0)
+        {
+            thunk_FUN_0084ca6c();
+        }
+        return uVar4;
     }*/
 }
